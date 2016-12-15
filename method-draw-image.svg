@@ -1,0 +1,92 @@
+<svg width="857" height="1617" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_3_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_46_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="1619" width="859" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#000" id="svg_1" height="302.999994" width="327.000008" y="30.000005" x="30" stroke-width="1.5" fill="#fff"/>
+  <ellipse filter="url(#svg_3_blur)" ry="3" rx="46" id="svg_3" cy="46" cx="303" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#396849"/>
+  <rect id="svg_4" height="101" width="307" y="223" x="41" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_5" y2="144" x2="191" y1="31" x1="191" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_6" y2="147" x2="189" y1="212" x1="30" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_7" y2="146" x2="191" y1="217" x1="358" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <ellipse ry="54" rx="54" id="svg_8" cy="136" cx="179" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_9" y="140" x="153" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Alien</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_10" y="252" x="56" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">=&gt; Treatments</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_11" y="282" x="56" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">=&gt; Items</text>
+  <rect stroke="#000" id="svg_12" height="302.999994" width="327.000008" y="30.000005" x="385" stroke-width="1.5" fill="#fff"/>
+  <ellipse filter="url(#svg_3_blur)" ry="3" rx="46" id="svg_13" cy="46" cx="658" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#396849"/>
+  <rect id="svg_14" height="101" width="307" y="223" x="396" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_15" y2="144" x2="546" y1="31" x1="546" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_16" y2="147" x2="544" y1="212" x1="385" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_17" y2="146" x2="546" y1="217" x1="713" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <ellipse ry="54" rx="54" id="svg_18" cy="136" cx="534" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_19" y="140" x="508" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Alien</text>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_20" y="252" x="411" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">=&gt; Treatment Option 1</text>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_21" y="282" x="411" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">=&gt; Treatment Option 2</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_22" y="311" x="411" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">=&gt; Treatment Option 3</text>
+  <rect stroke="#000" id="svg_23" height="302.999994" width="327.000008" y="354.000005" x="32" stroke-width="1.5" fill="#fff"/>
+  <ellipse filter="url(#svg_3_blur)" ry="3" rx="46" id="svg_24" cy="370" cx="305" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <rect id="svg_25" height="101" width="307" y="546" x="43" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_26" y2="468" x2="193" y1="355" x1="193" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_27" y2="471" x2="191" y1="536" x1="32" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_28" y2="470" x2="193" y1="541" x1="360" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <ellipse ry="54" rx="54" id="svg_29" cy="460" cx="181" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_30" y="464" x="155" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Alien</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_31" y="576" x="55" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">=&gt; "It was super effective!"</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_33" y="608" x="55" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">=&gt; "It wasn't very effective!"</text>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_34" y2="87" x2="742" y1="48" x1="678" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <text stroke="#000" transform="matrix(3.6959458780443337,0,0,3.8012752245991264,-1986.7116295910025,-250.86362644645848) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="5" id="svg_35" y="95.121189" x="733.376944" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">Alien Health</text>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_36" y2="102" x2="720" y1="47" x1="340" fill-opacity="null" stroke-opacity="null" stroke="#000" fill="none"/>
+  <line stroke="#000" stroke-linecap="null" stroke-linejoin="null" id="svg_37" y2="358" x2="392" y1="373" x1="331" stroke-opacity="null" stroke-width="1.5" fill="none"/>
+  <text stroke="#000" transform="matrix(4.816013813018799,0,0,4.5,-1526.4055252075195,-1242.5) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="5" id="svg_38" y="357.333333" x="399.584719" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">Health goes up or down</text>
+  <rect stroke="#000" id="svg_40" height="302.999994" width="327.000008" y="387.000005" x="387" stroke-width="1.5" fill="#fff"/>
+  <ellipse filter="url(#svg_3_blur)" ry="3" rx="46" id="svg_41" cy="403" cx="659" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_43" y2="501" x2="547" y1="388" x1="547" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_44" y2="504" x2="545" y1="569" x1="386" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_45" y2="503" x2="547" y1="574" x1="714" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <ellipse filter="url(#svg_46_blur)" ry="54" rx="54" id="svg_46" cy="493" cx="535" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <rect id="svg_42" height="101" width="307" y="498" x="396" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_47" y="497" x="509" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Alien</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_48" y="528" x="408" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">=&gt; "You saved the alien!"</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_51" y="568" x="412" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">=&gt; "The alien died!"</text>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_52" y="763" x="36" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">TASK: You are a medical doctor in a galactic hospital. Only you can save</text>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_53" y="793" x="40" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">this alien from a rare subplasmic disorder. Determine the correct treatments</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_54" y="823" x="40" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">and save its life.</text>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_55" y="867" x="33" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">STRUCTURE: The alien should be a class object with different methods that</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_56" y="895" x="35" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">will be called based on which treatments you apply. I should probably</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_57" y="924" x="35" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">also have a game object.</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_58" y="972" x="35" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">CHALLENGE: The alien should look three dimensional and use keyframes</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_59" y="1001" x="38" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">to have ambient "living thing" motion. I plan to reference this tutorial:</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_60" y="1032" x="39" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">https://cssanimation.rocks/spheres/</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_61" y="1083" x="36" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">MECHANICS: Treatment options will be clickable.</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_62" y="1139" x="37" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">CHALLENGE: Each clicked treament or item should call a method, but</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_63" y="1167" x="39" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">I'm not sure how to make it so those methods do different things in</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_64" y="1193" x="36" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">different orders, so the game is challenging and rewarding. Maybe 'if'</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_65" y="1219" x="36" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">statements that reference the 'health counter' of the object?</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_66" y="1267" x="39" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">CHALLENGE: CSS shading. I have used gradients before, but not</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_67" y="1293" x="41" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">perspective.</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_68" y="1339" x="40" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">MECHANICS: The alien object should have many different methods, and</text>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_69" y="1367" x="41" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">each will be triggered by a different order/timing of applied treatments.</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_70" y="1396" x="40" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Each method will, first, increase or decrease the 'health counter.' Then</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_71" y="1424" x="40" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Then they may or may not trigger a class with a keyframe that indicates</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_72" y="1451" x="40" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">getting sicker or getting healthier.</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_73" y="1493" x="40" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">WINNING: The isGameOver function will simply keep track of the 'health</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_74" y="1518" x="40" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">counter' object. If it reaches 100, the user wins. If it reaches 0, game over.</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_75" y="1557" x="42" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">QUESTION: Does the 'health counter' need it's own object? It's CSS</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_76" y="1582" x="41" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">styling will be affected fairly often, as the health level goes up or down.</text>
+ </g>
+</svg>
