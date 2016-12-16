@@ -30,6 +30,59 @@ const picobots = document.createElement('div');
 const alienTarget = $('.alien');
 const laserTarget = $('.laserTarget');
 
+const counter1 = document.createElement('div');
+const counter2 = document.createElement('div');
+const counter3 = document.createElement('div');
+const counter4 = document.createElement('div');
+const counter5 = document.createElement('div');
+
+const counter1Init = function() {
+  $(tablet).append(counter1);
+  $(counter1).addClass('countersAll');
+  $(counter1).html('Oh no! Golfox 5.1\'s crystal matrix lost alignment!');
+  $(counter1).css('display', 'none');
+}
+
+counter1Init();
+
+const counter2Init = function() {
+  $(tablet).append(counter2);
+  $(counter2).addClass('countersAll');
+  $(counter2).html('Golfox 5.1\'s adaptronic neuromodule has overloaded!');
+  $(counter2).css('display', 'none');
+}
+
+counter2Init();
+
+const counter3Init = function() {
+  $(tablet).append(counter3);
+  $(counter3).addClass('countersAll');
+  $(counter3).html('Oops! Your treatment compromised the alien\'s plasma replication globules!'
+);
+  $(counter3).css('display', 'none');
+}
+
+counter3Init();
+
+const counter4Init = function() {
+  $(tablet).append(counter4);
+  $(counter4).addClass('countersAll');
+  $(counter4).html('Shoot! Now the mucosal macro-tube is perforated!'
+);
+  $(counter4).css('display', 'none');
+}
+
+counter4Init();
+
+const counter5Init = function() {
+  $(tablet).append(counter5);
+  $(counter5).addClass('countersAll');
+  $(counter5).html('Alert! Golfox 5.1\'s digital meta-skeleton has sustained critical damage.'
+);
+  $(counter5).css('display', 'none');
+}
+
+counter5Init();
 
 const ghostParticleInit = function() {
   $(tabletInner).append(ghostParticle);
@@ -150,6 +203,8 @@ const playButton = setTimeout(function(){
 }, 0); //29000
 
 
+
+
 const treatmentOption = function() {
   $(tabletInner).append(treatments)
   $(tabletInner).append(instruments)
@@ -199,12 +254,17 @@ const clearReset = function resetFunction() {
   $(laser).css('display', 'none');
   $(picobots).css('display', 'none');
   $(laser).html('Choose a spot on Golfox 5.1 to target with the Laser!');
-  $(laserTarget).off('click', laserWorks);
   $(alienTarget).off('click', noLaserWorks);
   $(tBack).css('display', 'none');
   $(iBack).css('display', 'none');
+  $(tabletInner).css('display', 'block');
+  $(counter1).css('display', 'none');
+  $(counter2).css('display', 'none');
+  $(counter3).css('display', 'none');
+  $(counter4).css('display', 'none');
+  $(counter5).css('display', 'none');
   treatmentOption();
-}, 1000);
+}, 4000);
 };
 
 const immediateReset = function quickReset() {
@@ -223,51 +283,67 @@ const immediateReset = function quickReset() {
   $(alienTarget).off('click', noLaserWorks);
   $(tBack).css('display', 'none');
   $(iBack).css('display', 'none');
+  $(tabletInner).css('display', 'block');
+  $(counter1).css('display', 'none');
   treatmentOption();
 };
 
 
 
 
-const laserWorks = function() {
-  golfoxHealth += healthIncrement*6;
-  golfoxHealthNugs();
-  clearReset();
-}
+
 
 const noLaserWorks = function() {
   $(laser).html('It isn\'t effective!');
-  clearReset();
+  $(instrument1).css('display', 'none');
+  $(instrument2).css('display', 'none');
+  $(tBack).css('display', 'none');
+  counterChance();
 }
 
 let healthIncrement = 10;
 
 const useGhostParticle = function() {
   $(ghostParticle).css('display', 'block');
+  $(treatment1).css('display', 'none');
+  $(treatment2).css('display', 'none');
+  $(treatment3).css('display', 'none');
+  $(tBack).css('display', 'none');
   golfoxHealth += healthIncrement;
   healthIncrement = 10;
   golfoxHealthNugs();
-  clearReset();
+  counterChance();
 }
 const useDarkMatter = function() {
   $(darkMatter).css('display', 'block');
+  $(treatment1).css('display', 'none');
+  $(treatment2).css('display', 'none');
+  $(treatment3).css('display', 'none');
+  $(tBack).css('display', 'none');
   golfoxHealth += healthIncrement*3;
   healthIncrement = 10;
   golfoxHealthNugs();
-  clearReset();
+  counterChance();
 }
 const useBiogenicComp = function() {
   $(bioComputer).css('display', 'block');
-  clearReset();
+  $(treatment1).css('display', 'none');
+  $(treatment2).css('display', 'none');
+  $(treatment3).css('display', 'none');
+  $(tBack).css('display', 'none');
+  counterChance();
 }
 const useLaser = function() {
   $(laser).css('display', 'block');
   $(laserTarget).click(function(event) {
+    $(instrument1).css('display', 'none');
+    $(instrument2).css('display', 'none');
+    $(tBack).css('display', 'none');
     event.stopPropagation();
     $(laser).html('It\'s very effective!');
     golfoxHealth += healthIncrement*6;
     golfoxHealthNugs();
-    clearReset();
+    counterChance();
   });
   $(alienTarget).on('click', noLaserWorks);
 }
@@ -275,7 +351,7 @@ const useLaser = function() {
 const usePicobots = function(){
   $(picobots).css('display', 'block');
   healthIncrement = 20;
-  clearReset();
+  counterChance();
 }
 
 const backFunction = function() {
@@ -313,6 +389,18 @@ const golfoxMeter = $('.healthMeter');
 
 const golfoxHealthNugs = function() {
   switch(golfoxHealth) {
+    case (-30):
+        $('.healthNug').css('background-color', 'white');
+        $(golfoxMeter).html('0/10');
+        break;
+    case (-20):
+        $('.healthNug').css('background-color', 'white');
+        $(golfoxMeter).html('0/10');
+        break;
+    case (-10):
+        $('.healthNug').css('background-color', 'white');
+        $(golfoxMeter).html('0/10');
+        break;
     case 0:
         $('.healthNug').css('background-color', 'white');
         $(golfoxMeter).html('0/10');
@@ -422,10 +510,53 @@ const golfoxHealthNugs = function() {
 golfoxHealthNugs();
 
 
+const chance1 = function() {
+  $(tabletInner).css('display', 'none');
+  $(counter1).css('display', 'block');
+  golfoxHealth -= healthIncrement;
+  golfoxHealthNugs();
+  clearReset();
+}
 
+const chance2 = function() {
+  $(tabletInner).css('display', 'none');
+  $(counter2).css('display', 'block');
+  golfoxHealth -= healthIncrement*4;
+  golfoxHealthNugs();
+  clearReset();
+}
 
+const chance3 = function() {
+  $(tabletInner).css('display', 'none');
+  $(counter3).css('display', 'block');
+  golfoxHealth -= healthIncrement*2;
+  golfoxHealthNugs();
+  clearReset();
+}
 
+const chance4 = function() {
+  $(tabletInner).css('display', 'none');
+  $(counter4).css('display', 'block');
+  golfoxHealth -= healthIncrement*3;
+  golfoxHealthNugs();
+  clearReset();
+}
 
+const chance5 = function() {
+  $(tabletInner).css('display', 'none');
+  $(counter5).css('display', 'block');
+  golfoxHealth -= healthIncrement*7;
+  golfoxHealthNugs();
+  clearReset();
+}
+
+const counterAttacks = [chance1, chance2, chance3, chance4, chance5];
+
+const counterChance = function counterFunction() {
+  setTimeout(function() {
+  counterAttacks[Math.floor(Math.random()*5)]();
+}, 4000);
+}
 
 
 
