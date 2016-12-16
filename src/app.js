@@ -95,19 +95,25 @@ const treatmentOption = function() {
   $(tabletInner).append(treatments)
   $(tabletInner).append(instruments)
   $(treatments).css('display', 'block')
-  $(treatments).css('display', 'block')
+  $(instruments).css('display', 'block')
 }
 
 const listTreatments = function() {
   $(treatments).css('display', 'none');
   $(instruments).css('display', 'none');
   $(tabletInner).append(treatment1, treatment2, treatment3);
+  $(treatment1).css('display', 'block');
+  $(treatment2).css('display', 'block');
+  $(treatment3).css('display', 'block');
+
 }
 
 const listInstruments = function() {
   $(instruments).css('display', 'none');
   $(treatments).css('display', 'none');
   $(tabletInner).append(instrument1, instrument2);
+  $(instrument1).css('display', 'block');
+  $(instrument2).css('display', 'block');
 }
 
 
@@ -120,9 +126,19 @@ const treatmentInit = function(){
 
 treatmentInit();
 
+const clearReset = setTimeout(function() {
+  $(treatment1).css('display', 'none');
+  $(treatment2).css('display', 'none');
+  $(treatment3).css('display', 'none');
+  $(instrument1).css('display', 'none');
+  $(instrument2).css('display', 'none');
+  $(ghostParticle).css('display', 'none');
+  treatmentOption();
+}, 8000);
 
 const useGhostParticle = function() {
-  $(ghostParticle)
+  $(ghostParticle).css('display', 'block');
+  clearReset();
 }
 
 // const useDarkMatter = function() {
