@@ -1,3 +1,6 @@
+let golfoxHealth = 50;
+const golfoxMeter = $('.healthMeter');
+
 const tablet = $('<div></div>', {class: 'tablet'});
 $('body').append(tablet);
 
@@ -35,6 +38,42 @@ const counter2 = document.createElement('div');
 const counter3 = document.createElement('div');
 const counter4 = document.createElement('div');
 const counter5 = document.createElement('div');
+
+const winMessage = document.createElement('div');
+const loseMessage = document.createElement('div');
+
+const playAgain = document.createElement('div');
+const lossPlayAgain = document.createElement('div');
+
+const redoFunction = function() {
+  window.location.reload();
+}
+
+const winInit = function() {
+  $(tablet).append(winMessage);
+  $(winMessage).addClass('gameover');
+  $(winMessage).html('You did it! You saved Golfox 5.1! Congratulations, you win!');
+  $(winMessage).css('display', 'none');
+  $(winMessage).append(playAgain);
+  $(playAgain).addClass('playagain');
+  $(playAgain).html('Play Again');
+  $(playAgain).on('click', redoFunction);
+}
+
+winInit();
+
+const loseInit = function() {
+  $(tablet).append(loseMessage);
+  $(loseMessage).addClass('gameover');
+  $(loseMessage).html('Oh no! Golfox 5.1 died in your care. Guess you\'re not as good as they say. Sorry, you lose.');
+  $(loseMessage).css('display', 'none');
+  $(loseMessage).append(lossPlayAgain);
+  $(lossPlayAgain).addClass('playagain');
+  $(lossPlayAgain).html('Play Again');
+  $(lossPlayAgain).on('click', redoFunction);
+}
+
+loseInit();
 
 const counter1Init = function() {
   $(tablet).append(counter1);
@@ -157,7 +196,7 @@ const init = function(){
         'callback': function(){
             $('.p1').css('color','red');
         },
-        'delay': 10 //60
+        'delay': 10
     });
   });
 };
@@ -168,7 +207,7 @@ const init2 = setTimeout(function(){
         'callback': function(){
             $('.p2').css('color','red');
         },
-        'delay': 10 //60
+        'delay': 10
     });
   });
 }, 0); //7000
@@ -179,7 +218,7 @@ const init3 = setTimeout(function(){
         'callback': function(){
             $('.p3').css('color','red');
         },
-        'delay': 10 //60
+        'delay': 10
     });
   });
 }, 0); //18500
@@ -200,7 +239,7 @@ const playButton = setTimeout(function(){
   treatmentOption();
 }
 )
-}, 0); //29000
+}, 0); //28000
 
 
 
@@ -264,7 +303,7 @@ const clearReset = function resetFunction() {
   $(counter4).css('display', 'none');
   $(counter5).css('display', 'none');
   treatmentOption();
-}, 4000);
+}, 1000);
 };
 
 const immediateReset = function quickReset() {
@@ -279,7 +318,7 @@ const immediateReset = function quickReset() {
   $(laser).css('display', 'none');
   $(picobots).css('display', 'none');
   $(laser).html('Choose a spot on Golfox 5.1 to target with the Laser!');
-  $(laserTarget).off('click', laserWorks);
+
   $(alienTarget).off('click', noLaserWorks);
   $(tBack).css('display', 'none');
   $(iBack).css('display', 'none');
@@ -289,6 +328,32 @@ const immediateReset = function quickReset() {
 };
 
 
+
+const didYouWin = function winCheck() {
+  setTimeout(function() {
+  if (golfoxHealth >= 100) {
+    $(tabletInner).css('display', 'none');
+    $(winMessage).css('display', 'block');
+  }
+  else {
+    counterChance();
+  }
+}, 1000)
+}
+
+const didYouLose = function loseCheck() {
+  setTimeout(function() {
+  if (golfoxHealth <= 0) {
+    $(tabletInner).css('display', 'none');
+    const counters = $('.countersAll');
+    counters.css('display', 'none');
+    $(loseMessage).css('display', 'block');
+  }
+  else {
+    clearReset();
+  }
+}, 1000)
+}
 
 
 
@@ -312,7 +377,7 @@ const useGhostParticle = function() {
   golfoxHealth += healthIncrement;
   healthIncrement = 10;
   golfoxHealthNugs();
-  counterChance();
+  didYouWin();
 }
 const useDarkMatter = function() {
   $(darkMatter).css('display', 'block');
@@ -323,7 +388,7 @@ const useDarkMatter = function() {
   golfoxHealth += healthIncrement*3;
   healthIncrement = 10;
   golfoxHealthNugs();
-  counterChance();
+  didYouWin();
 }
 const useBiogenicComp = function() {
   $(bioComputer).css('display', 'block');
@@ -331,24 +396,27 @@ const useBiogenicComp = function() {
   $(treatment2).css('display', 'none');
   $(treatment3).css('display', 'none');
   $(tBack).css('display', 'none');
-  counterChance();
+  didYouWin();
 }
 const useLaser = function() {
   $(laser).css('display', 'block');
+  $(instrument1).css('display', 'none');
+  $(instrument2).css('display', 'none');
+  $(iBack).css('display', 'none');
   $(laserTarget).click(function(event) {
-    $(instrument1).css('display', 'none');
-    $(instrument2).css('display', 'none');
-    $(tBack).css('display', 'none');
     event.stopPropagation();
     $(laser).html('It\'s very effective!');
     golfoxHealth += healthIncrement*6;
     golfoxHealthNugs();
-    counterChance();
+    didYouWin();
   });
   $(alienTarget).on('click', noLaserWorks);
 }
 
 const usePicobots = function(){
+  $(instrument1).css('display', 'none');
+  $(instrument2).css('display', 'none');
+  $(iBack).css('display', 'none');
   $(picobots).css('display', 'block');
   healthIncrement = 20;
   counterChance();
@@ -384,8 +452,7 @@ listInit();
 
 ///nugs
 
-let golfoxHealth = 50;
-const golfoxMeter = $('.healthMeter');
+
 
 const golfoxHealthNugs = function() {
   switch(golfoxHealth) {
@@ -489,21 +556,27 @@ const golfoxHealthNugs = function() {
     case 100:
         $('.healthNug').css('background-color', 'green');
         $(golfoxMeter).html('10/10');
+        break;
     case 110:
         $('.healthNug').css('background-color', 'green');
         $(golfoxMeter).html('10/10');
+        break;
     case 120:
         $('.healthNug').css('background-color', 'green');
         $(golfoxMeter).html('10/10');
+        break;
     case 130:
         $('.healthNug').css('background-color', 'green');
         $(golfoxMeter).html('10/10');
+        break;
     case 140:
         $('.healthNug').css('background-color', 'green');
         $(golfoxMeter).html('10/10');
+        break;
     case 150:
         $('.healthNug').css('background-color', 'green');
         $(golfoxMeter).html('10/10');
+        break;
 }
 }
 
@@ -515,39 +588,39 @@ const chance1 = function() {
   $(counter1).css('display', 'block');
   golfoxHealth -= healthIncrement;
   golfoxHealthNugs();
-  clearReset();
+  didYouLose();
 }
 
 const chance2 = function() {
   $(tabletInner).css('display', 'none');
   $(counter2).css('display', 'block');
-  golfoxHealth -= healthIncrement*4;
+  golfoxHealth -= 40;
   golfoxHealthNugs();
-  clearReset();
+  didYouLose();
 }
 
 const chance3 = function() {
   $(tabletInner).css('display', 'none');
   $(counter3).css('display', 'block');
-  golfoxHealth -= healthIncrement*2;
+  golfoxHealth -= 20;
   golfoxHealthNugs();
-  clearReset();
+  didYouLose();
 }
 
 const chance4 = function() {
   $(tabletInner).css('display', 'none');
   $(counter4).css('display', 'block');
-  golfoxHealth -= healthIncrement*3;
+  golfoxHealth -= 30;
   golfoxHealthNugs();
-  clearReset();
+  didYouLose();
 }
 
 const chance5 = function() {
   $(tabletInner).css('display', 'none');
   $(counter5).css('display', 'block');
-  golfoxHealth -= healthIncrement*7;
+  golfoxHealth -= 70;
   golfoxHealthNugs();
-  clearReset();
+  didYouLose();
 }
 
 const counterAttacks = [chance1, chance2, chance3, chance4, chance5];
@@ -555,11 +628,8 @@ const counterAttacks = [chance1, chance2, chance3, chance4, chance5];
 const counterChance = function counterFunction() {
   setTimeout(function() {
   counterAttacks[Math.floor(Math.random()*5)]();
-}, 4000);
+}, 1000);
 }
-
-
-
 
 
 

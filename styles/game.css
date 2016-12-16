@@ -44,7 +44,7 @@ body {
   width: 400px;
   border-radius: 50%;
   z-index: 100;
-  /animation: alien-anim 2s infinite, alien-breathe 3s infinite;
+  animation: alien-anim 2s infinite, alien-breathe 3s infinite;
 }
 
 .alien:before {
@@ -88,7 +88,7 @@ body {
 .shadow {
   position: absolute;
   top: 200px;
-  left: 6em;
+  left: 6.5em;
   background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4),
   rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
   height: 300px;
@@ -121,7 +121,7 @@ h1 {
 
 .tablet {
   border: 3px solid black;
-  height: 600px;
+  height: 475px;
   width: 50vw;
   position: absolute;
   border-radius: 25px;
@@ -131,11 +131,10 @@ h1 {
 
 .tabletInner {
   position: absolute;
-  height: 450px;
+  height: 350px;
   width: 39vw;
   right: 5em;
   top: 11.5em;
-
   font-family: 'Exo';
 }
 
@@ -149,6 +148,23 @@ h1 {
   font-size: 36px;
   font-family: 'Exo';
   text-align: center;
+}
+
+.gameover {
+  position: absolute;
+  height: 350px;
+  width: 39vw;
+  top: 1em;
+  left: 1.1em;
+  font-family: 'Exo';
+  text-align: center;
+  font-size: 48px;
+  background-color: red;
+  color: yellow;
+  line-height: 56px;
+  border-radius: 30px;
+  padding: 10px;
+
 }
 
 p {
@@ -188,11 +204,27 @@ h2 {
   background-color: white;
   font-family: 'Exo';
   font-size: 36px;
-  height: 80px;
+  height: 115px;
   width: 30vw;
   color: red;
   line-height: 44px;
 }
+
+.playagain {
+  margin: 0 auto;
+  text-align: center;
+  background-color: yellow;
+  font-family: 'Exo';
+  font-size: 25px;
+  height: 30px;
+  width: 20vw;
+  margin: 20px auto;
+  color: red;
+  border: none;
+  line-height: 30px;
+}
+
+
 
 
 
