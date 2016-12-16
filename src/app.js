@@ -14,22 +14,81 @@ const instruments = document.createElement('h2');
 const treatment1 = document.createElement('h2');
 const treatment2 = document.createElement('h2');
 const treatment3 = document.createElement('h2');
+const tBack = document.createElement('h2');
 
 const instrument1 = document.createElement('h2');
 const instrument2 = document.createElement('h2');
+const iBack = document.createElement('h2');
 
 const ghostParticle = document.createElement('div');
 const darkMatter = document.createElement('div');
 const bioComputer = document.createElement('div');
 
+const laser = document.createElement('div');
+const picobots = document.createElement('div');
+
+const alienTarget = $('.alien');
+const laserTarget = $('.laserTarget');
+
+
 const ghostParticleInit = function() {
   $(tabletInner).append(ghostParticle);
   $(ghostParticle).addClass('gpi');
-  $(ghostParticle).html('You used a Ghost Particle Injection!')
+  $(ghostParticle).html('You used a Ghost Particle Infusion! It\'s not very effective!');
   $(ghostParticle).css('display', 'none');
 }
 
 ghostParticleInit();
+
+const darkMatterInit = function() {
+  $(tabletInner).append(darkMatter);
+  $(darkMatter).addClass('darkmatter');
+  $(darkMatter).html('You used a Dark Matter Retroversion! It\'s very effective!');
+  $(darkMatter).css('display', 'none');
+}
+
+darkMatterInit();
+
+const bioComputerInit = function() {
+  $(tabletInner).append(bioComputer);
+  $(bioComputer).addClass('biocomp');
+  $(bioComputer).html('You asked the Biogenic Computer! It says to try a Dark Matter Retroversion.');
+  $(bioComputer).css('display', 'none');
+}
+
+bioComputerInit();
+
+const laserInit = function() {
+  $(tabletInner).append(laser);
+  $(laser).addClass('laser');
+  $(laser).html('Choose a spot on Golfox 5.1 to target with the Laser!')
+  $(laser).css('display', 'none');
+}
+
+laserInit();
+
+const picobotsInit = function() {
+  $(tabletInner).append(picobots);
+  $(picobots).addClass('picobots');
+  $(picobots).html('You increased your equipment\'s efficiency with Picobots! Your next treatment will be doubly effective!');
+  $(picobots).css('display', 'none');
+}
+
+picobotsInit();
+
+const tBackInit = function() {
+  $(tBack).html('Back');
+  $(tBack).css('display', 'none');
+}
+
+const iBackInit = function() {
+  $(iBack).html('Back');
+  $(iBack).css('display', 'none');
+}
+
+tBackInit();
+iBackInit();
+
 
 $('body').append(tabletInner);
 
@@ -101,19 +160,20 @@ const treatmentOption = function() {
 const listTreatments = function() {
   $(treatments).css('display', 'none');
   $(instruments).css('display', 'none');
-  $(tabletInner).append(treatment1, treatment2, treatment3);
+  $(tabletInner).append(treatment1, treatment2, treatment3, tBack);
   $(treatment1).css('display', 'block');
   $(treatment2).css('display', 'block');
   $(treatment3).css('display', 'block');
-
+  $(tBack).css('display', 'block');
 }
 
 const listInstruments = function() {
   $(instruments).css('display', 'none');
   $(treatments).css('display', 'none');
-  $(tabletInner).append(instrument1, instrument2);
+  $(tabletInner).append(instrument1, instrument2, iBack);
   $(instrument1).css('display', 'block');
   $(instrument2).css('display', 'block');
+  $(iBack).css('display', 'block');
 }
 
 
@@ -126,38 +186,101 @@ const treatmentInit = function(){
 
 treatmentInit();
 
-const clearReset = setTimeout(function() {
+const clearReset = function resetFunction() {
+  setTimeout(function() {
   $(treatment1).css('display', 'none');
   $(treatment2).css('display', 'none');
   $(treatment3).css('display', 'none');
   $(instrument1).css('display', 'none');
   $(instrument2).css('display', 'none');
   $(ghostParticle).css('display', 'none');
+  $(darkMatter).css('display', 'none');
+  $(bioComputer).css('display', 'none');
+  $(laser).css('display', 'none');
+  $(picobots).css('display', 'none');
+  $(laser).html('Choose a spot on Golfox 5.1 to target with the Laser!');
+  $(laserTarget).off('click', laserWorks);
+  $(alienTarget).off('click', noLaserWorks);
+  $(tBack).css('display', 'none');
+  $(iBack).css('display', 'none');
   treatmentOption();
-}, 8000);
+}, 1000);
+};
 
-const useGhostParticle = function() {
-  $(ghostParticle).css('display', 'block');
+const immediateReset = function quickReset() {
+  $(treatment1).css('display', 'none');
+  $(treatment2).css('display', 'none');
+  $(treatment3).css('display', 'none');
+  $(instrument1).css('display', 'none');
+  $(instrument2).css('display', 'none');
+  $(ghostParticle).css('display', 'none');
+  $(darkMatter).css('display', 'none');
+  $(bioComputer).css('display', 'none');
+  $(laser).css('display', 'none');
+  $(picobots).css('display', 'none');
+  $(laser).html('Choose a spot on Golfox 5.1 to target with the Laser!');
+  $(laserTarget).off('click', laserWorks);
+  $(alienTarget).off('click', noLaserWorks);
+  $(tBack).css('display', 'none');
+  $(iBack).css('display', 'none');
+  treatmentOption();
+};
+
+
+
+
+const laserWorks = function() {
+  golfoxHealth += healthIncrement*6;
+  golfoxHealthNugs();
   clearReset();
 }
 
-// const useDarkMatter = function() {
+const noLaserWorks = function() {
+  $(laser).html('It isn\'t effective!');
+  clearReset();
+}
 
-// }
+let healthIncrement = 10;
 
-// const useBiogenicComp = function() {
+const useGhostParticle = function() {
+  $(ghostParticle).css('display', 'block');
+  golfoxHealth += healthIncrement;
+  healthIncrement = 10;
+  golfoxHealthNugs();
+  clearReset();
+}
+const useDarkMatter = function() {
+  $(darkMatter).css('display', 'block');
+  golfoxHealth += healthIncrement*3;
+  healthIncrement = 10;
+  golfoxHealthNugs();
+  clearReset();
+}
+const useBiogenicComp = function() {
+  $(bioComputer).css('display', 'block');
+  clearReset();
+}
+const useLaser = function() {
+  $(laser).css('display', 'block');
+  $(laserTarget).click(function(event) {
+    event.stopPropagation();
+    $(laser).html('It\'s very effective!');
+    golfoxHealth += healthIncrement*6;
+    golfoxHealthNugs();
+    clearReset();
+  });
+  $(alienTarget).on('click', noLaserWorks);
+}
 
-// }
+const usePicobots = function(){
+  $(picobots).css('display', 'block');
+  healthIncrement = 20;
+  clearReset();
+}
 
-// const useLaser = function() {
-
-// }
-
-// const usePicobots = function(){
-
-// }
-
-
+const backFunction = function() {
+  immediateReset();
+}
 
 
 
@@ -165,22 +288,138 @@ const listInit = function() {
   $(treatment1).html('Ghost Particle Infusion');
   $(treatment1).on('click', useGhostParticle);
   $(treatment2).html('Dark Matter Retroversion');
-  //$(treatment2).on('click', useDarkMatter);
+  $(treatment2).on('click', useDarkMatter);
   $(treatment3).html('Ask Biogenic Computer');
-  //$(treatment3).on('click', useBiogenicComp);
+  $(treatment3).on('click', useBiogenicComp);
   $(instrument1).html('UltraCold Mirror Laser');
-  //$(instrument1).on('click', useLaser);
+  $(instrument1).on('click', useLaser);
   $(instrument2).html('Picobot Catalysts')
-  //$(instrument2).on('click', usePicobots);
+  $(instrument2).on('click', usePicobots);
+  $(tBack).on('click', backFunction);
+  $(iBack).on('click', backFunction);
 }
 
 listInit();
 
 
 
+//////relaxxxxx
 
 
+///nugs
 
+let golfoxHealth = 50;
+const golfoxMeter = $('.healthMeter');
+
+const golfoxHealthNugs = function() {
+  switch(golfoxHealth) {
+    case 0:
+        $('.healthNug').css('background-color', 'white');
+        $(golfoxMeter).html('0/10');
+        break;
+    case 10:
+        $('.healthNug').css('background-color', 'white');
+        $('#nug1').css('background-color', 'red');
+        $(golfoxMeter).html('1/10');
+        break;
+    case 20:
+        $('.healthNug').css('background-color', 'white');
+        $('#nug1').css('background-color', 'red');
+        $('#nug2').css('background-color', 'red');
+        $(golfoxMeter).html('2/10');
+        break;
+    case 30:
+        $('.healthNug').css('background-color', 'white');
+        $('#nug1').css('background-color', 'red');
+        $('#nug2').css('background-color', 'red');
+        $('#nug3').css('background-color', 'red');
+        $(golfoxMeter).html('3/10');
+        break;
+    case 40:
+        $('.healthNug').css('background-color', 'white');
+        $('#nug1').css('background-color', 'yellow');
+        $('#nug2').css('background-color', 'yellow');
+        $('#nug3').css('background-color', 'yellow');
+        $('#nug4').css('background-color', 'yellow');
+        $(golfoxMeter).html('4/10');
+        break;
+    case 50:
+        $('.healthNug').css('background-color', 'white');
+        $('#nug1').css('background-color', 'yellow');
+        $('#nug2').css('background-color', 'yellow');
+        $('#nug3').css('background-color', 'yellow');
+        $('#nug4').css('background-color', 'yellow');
+        $('#nug5').css('background-color', 'yellow');
+        $(golfoxMeter).html('5/10');
+        break;
+    case 60:
+        $('.healthNug').css('background-color', 'white');
+        $('#nug1').css('background-color', 'yellow');
+        $('#nug2').css('background-color', 'yellow');
+        $('#nug3').css('background-color', 'yellow');
+        $('#nug4').css('background-color', 'yellow');
+        $('#nug5').css('background-color', 'yellow');
+        $('#nug6').css('background-color', 'yellow');
+        $(golfoxMeter).html('6/10');
+        break;
+    case 70:
+        $('.healthNug').css('background-color', 'white');
+        $('#nug1').css('background-color', 'green');
+        $('#nug2').css('background-color', 'green');
+        $('#nug3').css('background-color', 'green');
+        $('#nug4').css('background-color', 'green');
+        $('#nug5').css('background-color', 'green');
+        $('#nug6').css('background-color', 'green');
+        $('#nug7').css('background-color', 'green');
+        $(golfoxMeter).html('7/10');
+        break;
+    case 80:
+        $('.healthNug').css('background-color', 'white');
+        $('#nug1').css('background-color', 'green');
+        $('#nug2').css('background-color', 'green');
+        $('#nug3').css('background-color', 'green');
+        $('#nug4').css('background-color', 'green');
+        $('#nug5').css('background-color', 'green');
+        $('#nug6').css('background-color', 'green');
+        $('#nug7').css('background-color', 'green');
+        $('#nug8').css('background-color', 'green');
+        $(golfoxMeter).html('8/10');
+        break;
+    case 90:
+        $('.healthNug').css('background-color', 'white');
+        $('#nug1').css('background-color', 'green');
+        $('#nug2').css('background-color', 'green');
+        $('#nug3').css('background-color', 'green');
+        $('#nug4').css('background-color', 'green');
+        $('#nug5').css('background-color', 'green');
+        $('#nug6').css('background-color', 'green');
+        $('#nug7').css('background-color', 'green');
+        $('#nug8').css('background-color', 'green');
+        $('#nug9').css('background-color', 'green');
+        $(golfoxMeter).html('9/10');
+        break;
+    case 100:
+        $('.healthNug').css('background-color', 'green');
+        $(golfoxMeter).html('10/10');
+    case 110:
+        $('.healthNug').css('background-color', 'green');
+        $(golfoxMeter).html('10/10');
+    case 120:
+        $('.healthNug').css('background-color', 'green');
+        $(golfoxMeter).html('10/10');
+    case 130:
+        $('.healthNug').css('background-color', 'green');
+        $(golfoxMeter).html('10/10');
+    case 140:
+        $('.healthNug').css('background-color', 'green');
+        $(golfoxMeter).html('10/10');
+    case 150:
+        $('.healthNug').css('background-color', 'green');
+        $(golfoxMeter).html('10/10');
+}
+}
+
+golfoxHealthNugs();
 
 
 
